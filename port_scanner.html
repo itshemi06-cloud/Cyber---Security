@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Port Scanner</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background: #050505;
+                color: white;
+                font-family: Arial,sans-serif;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .box{
+                
+                background-color: #0d0d0d;
+                border-radius: 15px;
+                border:1px solid #222;
+                padding: 40px;
+                width: 500px;
+                text-align: center;
+                box-shadow: 0 0 25px rgba(255,23,68,0.2);
+
+            }
+
+            h1{
+               color: #ff1744;
+               margin-bottom: 15px;
+               text-shadow: 0 0 15px #ff1744;
+            }
+            p{
+               color:#888;
+               margin-bottom: 30px;
+
+            }
+            input{
+              width: 100%;
+              padding: 13px;
+
+              background: #050505;
+              color:white;
+
+              border-radius: 6px;
+              border: 1px solid #333;
+
+              margin-bottom: 15px ;
+              outline: none;
+
+            }
+
+            input:focus{
+              border-color: #00ff88;
+
+            button{
+                width: 100%;
+                padding: 12px 25px;
+                background-color: #ff1744;
+                color: #00ff88;
+                border: 1px solid #00ff88;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            button:hover{
+                background-color: #00ff88;
+                color: #000;
+                box-shadow: 0 0 15px #00ff88;
+            }
+
+            .result{
+                margin-top: 25px;
+                color: #00ff88;
+                font-size: 16px;
+                text-align: left;
+
+            }
+
+            .back{
+                display: inline-block;
+                margin-top: 25px;
+                color: #888;
+                text-decoration: none;
+            }
+
+            .back:hover{
+                color: #ff1744;
+            }
+
+           }
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+
+
+            <h1>Port Scanner</h1>
+
+            <p>Scan Common Network Ports</p>
+
+            <form method = "post">
+               <input
+                  type="text" 
+                  id="target" 
+                  placeholder="Enter IP address">
+                  required>
+            <button type="submit">
+                Scan Ports
+            </button>
+            </form>
+            
+                {% if result %}
+                    <div class="result">
+                        <h3>Scan Results:</h3>
+                        <br>
+                            {% for result in results %}
+                                <li>{{ result }}</li>
+                            {% endfor %}
+                        </br>
+                    </div>
+                {% endif %}
+
+                <a href="/" class="back">Back to Home</a>
+        </div>
+    </body>
+
+</html>

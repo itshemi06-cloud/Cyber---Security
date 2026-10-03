@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cyber Security Website</title>
+        <style>
+            * { 
+                margin: 0;
+                padding: 0; 
+                box-sizing: border-box;
+            }
+            body {
+                background: color #050505;;
+                color: #ffffff;
+                font-family: Arial, sans-serif;
+                min-height: 100vh;
+
+            }
+            /* Header styles */
+            header {
+                background: color #080808;;
+                padding: 25px;
+                text-align: center;
+                border-bottom: 1px solid #222;
+            }
+             header h1 {
+                color: #ff1744;
+                font-size: 38px;
+                letter-spacing: 2px;
+                text-shadow: 0 0 15px #ff1744;
+             }
+            header p {
+                color:#999;
+                margin-top: 10px;
+            }
+            .container {
+                max-width: 1000px;
+                margin: 50px auto;
+                padding: 20px;
+                text-align: center;
+            }
+            .container h2 {
+                color: #00ff88;
+                font-size: 28px;
+                margin-bottom: 10px;
+                text-shadow: 0 0 10px #00ff88;
+            }
+            .container > p{
+               color: #888;
+                margin-bottom: 35px;
+            }
+
+            .tools {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .card {
+                background: #0d0d0d;
+                padding: 30px;
+                border:1px solid #222;
+                border-radius: 12px;
+                transition: 0.3s;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+                border-color: #ff1744;
+                box-shadow: 0 0 20px rgba(255, 23, 68, 0.3);
+            }
+
+            .card h3 {
+                color: #ff1744;
+                margin-bottom: 12px;
+            }
+
+            .card p {
+                color: #999;
+                margin-bottom: 20px;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                border: 1px solid #00ff88;
+                border-radius: 6px;
+                color: #00ff88;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+
+            .btn:hover {
+                background: #00ff88;
+                color: #000;
+                box-shadow: 0 0 15px #00ff88;
+            }
+
+            footer {
+                color: #555;
+                padding: 25px;
+                text-align: center;
+                border-top: 1px solid #222;
+                margin-top: 50px;
+            }
+
+            @media (max-width: 700px) {
+                .tools {
+                    grid-template-columns: 1fr;
+                }
+                header h1 {
+                    font-size: 28px;
+                }
+            }
+ 
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>CYBER SECURITY</h1>
+            <p>Security Tools & Network Analysis</p>
+        </header>
+        < class="container">
+            
+            <h2>Available Tools</h2>
+            <P> Explore my Cyber Security Projects </P> 
+            <div class="tools"> 
+                <div class="card">
+                    <h3>Password Strength Checker</h3>
+                    <p>Check the strength of your passwords and get suggestions for improvement.</p>
+                    <a href="/password" class="btn">Try Now</a>
+            </div>
+
+            <div class="card">
+                    <h3>Port Scanner</h3>
+                    <p>Scan common Network ports</p>
+                    <a href="/portscanner" class="btn">Try Now</a>
+            </div>
+
+            <div class="card">
+                    <h3>Hash Generator</h3>
+                    <p>Generate SHA-256 hash value.</p>
+                    <a href="/hash" class="btn">Try Now</a>
+            </div>
+             
+            <div class="card">
+                    <h3>IP & Network Tools</h3>
+                    <p>Get your IP address and other network information.</p>
+                    <a href="/ipinfo" class="btn">Try Now</a>
+            </div>
+
+
+        </div>
+         <footer>
+            2026 Cyber Security Tools Education Project.
+         </footer>
+        </body>
+</html>
+
+           
+
+            
